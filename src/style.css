@@ -1,0 +1,119 @@
+*
+{
+	font-family: arial;
+}
+
+body
+{
+	font-size: 4rem;
+	background-color: #000;
+	color: #fff;
+}
+
+.scroll
+{
+	display: flex;
+	white-space: nowrap;
+}
+
+.scroll div
+{
+	display: flex;
+	padding: 0 30px;
+}
+
+.scroll p
+{
+	margin: 0;
+}
+
+.RightToLeft
+{
+	animation: RightToLeft var(--scroll-speed) infinite linear;
+}
+
+.form-container
+{
+	display: flex;
+	flex-direction: row;
+	margin: 10px 0px;
+}
+
+.form-container label
+{
+	font-weight: bold;
+	padding-right: 20px;
+	min-width: 40vw;
+}
+
+.form-container input
+{
+	width: 100%;
+}
+
+.form-container input[type=text]
+{
+	min-width: 50vw;
+	font-size: 0.5em;
+}
+
+.form-container input[type=color]
+{
+	width: 80px;
+	height: 80px;
+}
+
+.form-container span
+{
+	font-size: 0.5em;
+	line-height: 2em;
+}
+
+#banner
+{
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 2em;
+	color: var(--scroll-color);
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	width: 80vw;
+	border: dashed 5px #fff;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 0px;
+}
+
+
+
+
+
+.fullscreen > *
+{
+	display: none;
+}
+
+.fullscreen #banner
+{
+	display: flex;
+  	width: 100vw;
+	height: 100vh;
+	border: none;
+	overflow: hidden;
+	font-size: min(var(--scroll-size), 100vh);
+	margin: 0px;
+	padding: 0px;
+}
+
+@keyframes RightToLeft
+{
+	from
+	{
+		transform: translateX(0%);
+	}
+	to
+	{
+		transform: translateX(-100%);
+	}
+}
