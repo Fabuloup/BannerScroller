@@ -21,6 +21,8 @@ function updateAnimationTime(value) {
 // Update scroll size CSS variable
 function updateTextSize(value) {
     banner.style.setProperty('--scroll-size', `${value}vw`);
+    const previewSize = value * banner.clientWidth / 100;
+    banner.style.setProperty('--scroll-preview-size', `${previewSize}px`);
 }
 
 // Update text color variable
@@ -43,6 +45,15 @@ sizeInput.addEventListener('input', function () {
 
 colorInput.addEventListener('input', function () {
     updateTextColor(this.value);
+});
+
+// Toggle fullscreen on banner click
+banner.addEventListener('click', function () {
+    const isFullscreen = document.body.classList.contains('fullscreen');
+    document.body.classList.toggle('fullscreen', !isFullscreen);
+    if (!isFullscreen) {
+        window.scrollTo(0, 1);
+    }
 });
 
 // Orientation handler

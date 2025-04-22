@@ -10,6 +10,12 @@ body
 	color: #fff;
 }
 
+.muted
+{
+	font-size: 0.3em;
+	color: #666;
+}
+
 .scroll
 {
 	display: flex;
@@ -73,12 +79,13 @@ body
 {
 	font-family: monospace;
 	font-weight: bold;
-	font-size: 2em;
+	font-size: min(var(--scroll-preview-size), 30vw);
 	color: var(--scroll-color);
 	display: flex;
 	align-items: center;
 	overflow: hidden;
 	width: 80vw;
+	height: 30vw;
 	border: dashed 5px #fff;
 	margin-left: auto;
 	margin-right: auto;
