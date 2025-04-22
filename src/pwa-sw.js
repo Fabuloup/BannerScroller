@@ -39,7 +39,7 @@ self.addEventListener("fetch", function (event) {
   var requestUrl = new URL(event.request.url);
 
   // Save all resources on origin path only
-    if (requestUrl.pathname.substring(0,18) === '/experiments/bannerscroller/') {
+    if (requestUrl.pathname.substring(0,18) === 'localhost:8080/') {
       event.respondWith(
         caches.open(CACHE).then(function(cache) {
         // Go to the network to ask for that resource
